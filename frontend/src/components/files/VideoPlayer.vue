@@ -92,9 +92,27 @@ const initVideoPlayer = async () => {
 const getOptions = (...srcOpt: any[]) => {
   const options = {
     controlBar: {
+      children: {
+        playToggle: true,
+        volumePanel: true,
+        currentTimeDisplay: true,
+        timeDivider: true,
+        durationDisplay: true,
+        progressControl: true,
+        skipButtons: true,
+        playbackRateMenuButton: true,
+        fullscreenToggle: true,
+      },
       skipButtons: {
         forward: 5,
         backward: 5,
+      },
+      volumePanel: {
+        inline: false,
+        vertical: true,
+      },
+      progressControl: {
+        seekBar: true,
       },
     },
     html5: {
